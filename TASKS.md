@@ -120,7 +120,7 @@ Let's try to create a competitor for Trello!
 
 3. When somebody DELETE User, all Tasks where User is assignee should be updated to put userId=null.
 
-4. For now, these endpoints should operate only with in-memory (hardcoded) data, in the next tasks we will use a DB for it. You may organize your modules with the consideration that the data source will be changed soon.
+4. For now, these endpoints should operate only with in-memory (hardcoded) data, in the next tasks we will use a DBinMemory for it. You may organize your modules with the consideration that the data source will be changed soon.
 
 5. An application/json format should be used for request and response body.
 
@@ -170,7 +170,7 @@ Add logging functionality to already existing REST service.
 ![alt text](./doc/connection.png "Connection modal")
 
 2. Use [Mongoose ODM](https://mongoosejs.com/) to store and update data.
-3. The information on DB connection (connection string) should be stored in `.env` file and should be passed to the application using the environment variables with the help of the following [dotenv package](https://www.npmjs.com/package/dotenv).
+3. The information on DBinMemory connection (connection string) should be stored in `.env` file and should be passed to the application using the environment variables with the help of the following [dotenv package](https://www.npmjs.com/package/dotenv).
 
 ## Task 5. Authentication and JWT
 
@@ -184,7 +184,7 @@ Add logging functionality to already existing REST service.
   ```
 6. Add a middleware which will proxy all the requests (except `/login`) and check that HTTP **Authorization** header has the correct value of **JWT** token.
 7. In case of the HTTP **Authorization** header in the request is absent or invalid or doesn’t follow `Bearer` scheme, the middleware should stop further router method execution and return HTTP **401** code (Unauthorized error) and the corresponding error message.
-8. **Add admin user to DB** on service start with login=admin and password=admin.
+8. **Add admin user to DBinMemory** on service start with login=admin and password=admin.
 
 ### `bcrypt` installation issues:
 
