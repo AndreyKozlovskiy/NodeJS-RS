@@ -1,21 +1,33 @@
 const { NOT_FOUND_ENTITY_ERROR } = require('../../errors/error');
-const DBinMemory = require('../../utils/DBinMemory');
+const DB = require('../../utils/DBinMemory');
 
 const TABLE_NAME = 'Users';
 const ENTITY_NAME = 'user';
 
-const getAllUsers = async () => await DBinMemory.getAllTable(TABLE_NAME);
+const getAllUsers = async () => await DB.getAllTable(TABLE_NAME);
 
-const getUserById = async id => await DBinMemory.getEntityById(TABLE_NAME, id);
+const getUserById = async id => {
+  const entity = await DB.getEntityById(TABLE_NAME, id);
+  if (!entity) {
+    throw new NOT_FOUND_ENTITY_ERROR(ENTITY_NAME, { id });
+  }
 
-const addUser = async user => await DBinMemory.addEntity(TABLE_NAME, user);
+  return entity;
+};
 
-const updateUser = async (id, user) =>
-  await DBinMemory.updateEntity(TABLE_NAME, id, user);
+const addUser = async user => await DB.addEntity(TABLE_NAME, user);
+
+const updateUser = async (id, user) => {
+  const updatedUser = await DB.updateEntity(TABLE_NAME, id, user);
+  if (!updatedUser) {
+    throw new NOT_FOUND_ENTITY_ERROR(ENTITY_NAME, { id });
+  }
+
+  return updatedUser;
+};
 
 const deleteUser = async id => {
-  const user = await DBinMemory.deleteEntity(TABLE_NAME, id);
-  if (!user) {
+  if (!(await DB.deleteEntity(TABLE_NAME, id))) {
     throw new NOT_FOUND_ENTITY_ERROR(ENTITY_NAME, { id });
   }
 };
