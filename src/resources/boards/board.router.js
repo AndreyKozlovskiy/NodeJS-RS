@@ -40,17 +40,11 @@ router
   )
   .put(
     catchErrors(async (request, response) => {
-      const board = new Board({
-        id: request.params.id,
-        title: request.body.title,
-        columns: [...request.body.columns]
-      });
-
       await response
         .status(200)
         .send(
           Board.toResponse(
-            await boardsService.updateBoard(request.params.id, board)
+            await boardsService.updateBoard(request.params.id, request.body)
           )
         );
     })

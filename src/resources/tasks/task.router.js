@@ -42,21 +42,11 @@ router
   )
   .put(
     catchErrors(async (request, response) => {
-      const task = new Task({
-        id: request.params.id,
-        title: request.body.title,
-        order: request.body.order,
-        description: request.body.description,
-        userId: request.body.userId,
-        boardId: request.body.boardId,
-        columnId: request.body.columnId
-      });
-
       await response
         .status(200)
         .send(
           Task.toResponse(
-            await tasksService.updateTask(request.params.id, task)
+            await tasksService.updateTask(request.params.id, request.body)
           )
         );
     })

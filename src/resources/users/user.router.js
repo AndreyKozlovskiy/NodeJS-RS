@@ -13,15 +13,9 @@ router
   )
   .post(
     catchErrors(async (request, response) => {
-      const user = new User({
-        name: request.body.name,
-        login: request.body.login,
-        password: request.body.password
-      });
-
       await response
         .status(200)
-        .send(User.toResponse(await usersService.addUser(user)));
+        .send(User.toResponse(await usersService.addUser(request.body)));
     })
   );
 
@@ -35,18 +29,11 @@ router
   )
   .put(
     catchErrors(async (request, response) => {
-      const user = new User({
-        id: request.params.id,
-        name: request.body.name,
-        login: request.body.login,
-        password: request.body.password
-      });
-
       await response
         .status(200)
         .send(
           User.toResponse(
-            await usersService.updateUser(request.params.id, user)
+            await usersService.updateUser(request.params.id, request.body)
           )
         );
     })
