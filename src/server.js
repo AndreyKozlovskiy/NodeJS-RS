@@ -11,6 +11,7 @@ const users = [];
 const board = new Board();
 const tasks = [];
 
+users.push(new User({ login: 'admin', password: 'admin' }));
 for (let i = 0; i < 3; i++) {
   users.push(new User());
 }

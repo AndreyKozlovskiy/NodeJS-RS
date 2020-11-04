@@ -4,7 +4,7 @@ const tasksService = require('./task.service');
 const { catchErrors } = require('../../errors/catchErrors');
 
 router
-  .route('/')
+  .route('/boards/:boardId/tasks/')
   .get(
     catchErrors(async (request, response) => {
       const tasks = await tasksService.getAllTasks();
@@ -29,7 +29,7 @@ router
   );
 
 router
-  .route('/:id')
+  .route('/boards/:boardId/tasks/:id')
   .get(
     catchErrors(async (request, response) => {
       const task = await tasksService.getTaskById(request.params.id);

@@ -9,7 +9,7 @@ const taskSchema = new mongoose.Schema(
     },
     title: {
       type: String,
-      default: 'titleTask'
+      default: 'TITLE'
     },
     order: {
       type: Number,
@@ -32,10 +32,7 @@ const taskSchema = new mongoose.Schema(
       default: null
     }
   },
-  {
-    collection: 'Tasks',
-    versionKey: false
-  }
+  { collection: 'Tasks', versionKey: false }
 );
 
 taskSchema.statics.toResponse = task => {

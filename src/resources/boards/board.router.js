@@ -4,7 +4,7 @@ const boardsService = require('./board.service');
 const { catchErrors } = require('../../errors/catchErrors');
 
 router
-  .route('/')
+  .route('/boards/')
   .get(
     catchErrors(async (request, response) => {
       const boards = await boardsService.getAllBoards();
@@ -27,7 +27,7 @@ router
   );
 
 router
-  .route('/:id')
+  .route('/boards/:id')
   .get(
     catchErrors(async (request, response) => {
       const board = await boardsService.getBoardById(request.params.id);

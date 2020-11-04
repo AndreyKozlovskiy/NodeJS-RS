@@ -9,17 +9,14 @@ const boardSchema = new mongoose.Schema(
     },
     title: {
       type: String,
-      default: 'titleBoard'
+      default: 'TITLE'
     },
     columns: {
       type: Array,
       default: []
     }
   },
-  {
-    collection: 'Boards',
-    versionKey: false
-  }
+  { collection: 'Boards', versionKey: false }
 );
 
 boardSchema.statics.toResponse = board => {

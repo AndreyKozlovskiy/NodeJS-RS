@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8beee47a-09ee-4f48-9262-c1a47ebf2af4" name="Default Changelist" comment="" />
+    <list default="true" id="8beee47a-09ee-4f48-9262-c1a47ebf2af4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/resources/auth/auth.router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/auth/authMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/errorLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/errorLog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs/errorLog.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs/log.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/boards/board.memory.repository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/boards/board.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/boards/board.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/boards/board.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/boards/board.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/tasks/task.memory.repository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/tasks/task.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/tasks/task.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/tasks/task.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/tasks/task.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/users/user.memory.repository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/users/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/users/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/users/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/users/user.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1j6LDCLN1bt9iNGtxARhSW72SUp" />
   <component name="ProjectViewState">
@@ -16,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/auth" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -25,6 +51,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\3 курс\NodeJS-RS\src\resources\auth" />
+      <recent name="D:\3 курс\NodeJS-RS\src\resources" />
       <recent name="C:\Users\Onya\Downloads\NodeJS-RS-master\src\common" />
       <recent name="C:\Users\Onya\Downloads\NodeJS-RS-master\src\errors" />
     </key>
@@ -40,10 +68,29 @@
       <option name="presentableId" value="Default" />
       <updated>1603119473048</updated>
       <workItem from="1603119477966" duration="2869000" />
+      <workItem from="1604492108969" duration="1456000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1604493565897">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604493565897" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1604493565896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604493565896" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1604493565896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604493565896" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1604493565897">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604493565897" />
   </component>
 </project>

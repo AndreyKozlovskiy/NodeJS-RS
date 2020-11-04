@@ -2,9 +2,11 @@ const router = require('express').Router();
 const User = require('./user.model');
 const usersService = require('./user.service');
 const { catchErrors } = require('../../errors/catchErrors');
+const bcrypt = require('bcrypt');
+const { SALT_ROUNDS } = require('../../common/config');
 
 router
-  .route('/')
+  .route('/users/')
   .get(
     catchErrors(async (request, response) => {
       const users = await usersService.getAllUsers();
@@ -13,14 +15,16 @@ router
   )
   .post(
     catchErrors(async (request, response) => {
+      const hash = await bcrypt.hash(request.body.password, SALT_ROUNDS);
+      const newUser = new User({ ...request.body, password: hash });
       await response
         .status(200)
-        .send(User.toResponse(await usersService.addUser(request.body)));
+        .send(User.toResponse(await usersService.addUser(newUser)));
     })
   );
 
 router
-  .route('/:id')
+  .route('/users/:id')
   .get(
     catchErrors(async (request, response) => {
       const user = await usersService.getUserById(request.params.id);
